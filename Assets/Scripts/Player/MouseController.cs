@@ -5,6 +5,7 @@ public class MouseController : MonoBehaviour
     public float sensitivity;
     public Transform cam;
     float yRot;
+    bool firstFrame = true;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,13 @@ public class MouseController : MonoBehaviour
 
         yRot -= mouseY;
         yRot = Mathf.Clamp (yRot, -90f, 90f);
+        if(firstFrame) {
+            yRot = 0f;
+        }
 
         cam.localRotation = Quaternion.Euler (yRot, 0f, 0f);
         transform.Rotate (Vector3.up * mouseX);
+
+        firstFrame = false;
     }
 }
