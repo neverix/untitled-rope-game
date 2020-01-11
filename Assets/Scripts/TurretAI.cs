@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(HP))]
+
 public class TurretAI : MonoBehaviour
 {
     private bool is_enabled = false;
@@ -14,6 +16,7 @@ public class TurretAI : MonoBehaviour
     public float interval = 1;
     private float last_time = 0;
 
+    public HP hp;
     public GameObject bullet_prefab;
 
     private void Start()
@@ -23,6 +26,8 @@ public class TurretAI : MonoBehaviour
 
     void Update()
     {
+        if (hp.hp == 0 || hp.hp > 100) Destroy(gameObject);
+
         GameObject target = null; ;
         if (targets.Count == 0) target = null; else target  = targets[0];
 
@@ -34,10 +39,10 @@ public class TurretAI : MonoBehaviour
 
             body.transform.LookAt(pos_for_body);
 
+            gunbody.transform.LookAt(target.transform.position);
+
             if (Time.time - last_time >= interval)
             {
-                gunbody.transform.LookAt(target.transform.position);
-
                 GameObject bullet = Instantiate(bullet_prefab);
 
                 bullet.transform.position = gunbody.transform.position;

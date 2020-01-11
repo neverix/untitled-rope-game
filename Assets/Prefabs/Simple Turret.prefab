@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 5029810770488228815}
   - component: {fileID: 1384744642}
   - component: {fileID: 7731117704523221609}
+  - component: {fileID: -142250165830572091}
   m_Layer: 9
   m_Name: Simple Turret
   m_TagString: Untagged
@@ -312,10 +313,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3bc505724a49be4c83a7625a55d1e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   body: {fileID: 6769486480604088752}
   head: {fileID: 1737792616832911303}
   gunbody: {fileID: 7276687169717787214}
   interval: 1
+  hp: {fileID: -142250165830572091}
   bullet_prefab: {fileID: 7496887277063935264, guid: c34c7a5ced26d67428566c3104934218,
     type: 3}
 --- !u!111 &7731117704523221609
@@ -336,6 +339,19 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &-142250165830572091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3897526165160946126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 585d5f68f92b1bc43a4d83534751503f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
 --- !u!1 &6769486480604088752
 GameObject:
   m_ObjectHideFlags: 0
