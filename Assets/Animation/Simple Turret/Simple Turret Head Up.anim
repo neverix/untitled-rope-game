@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Simple Turret Head UP
+  m_Name: Simple Turret Head Up
   serializedVersion: 6
   m_Legacy: 1
   m_Compressed: 0
@@ -39,7 +39,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: 
+    path: Body/Head
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -73,7 +73,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Gun
+    path: Body/Head/Gun
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -131,7 +131,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: 
+    path: Body/Head
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -159,7 +159,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: 
+    path: Body/Head
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -187,7 +187,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: 
+    path: Body/Head
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -224,7 +224,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Gun
+    path: Body/Head/Gun
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -261,7 +261,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Gun
+    path: Body/Head/Gun
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -298,7 +298,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Gun
+    path: Body/Head/Gun
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []
