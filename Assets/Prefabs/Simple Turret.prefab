@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 6769486480604088752}
   head: {fileID: 1737792616832911303}
-  gunbody: {fileID: 0}
+  gunbody: {fileID: 7276687169717787214}
   interval: 1
   bullet_prefab: {fileID: 7496887277063935264, guid: c34c7a5ced26d67428566c3104934218,
     type: 3}

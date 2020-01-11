@@ -1,0 +1,1 @@
+﻿public class HP : UnityEngine.MonoBehaviour {public byte hp = 100;}
