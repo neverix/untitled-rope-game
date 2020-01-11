@@ -5,13 +5,11 @@ using UnityEngine;
 public class Lift : Interactable
 {
     public GameObject EndPos;
-    public override void Interact()
-    {
-        FixedUpdate();
-        throw new System.NotImplementedException();
-    }
+    public bool is_enabled = false;
+
+    public override void Interact() => is_enabled = !is_enabled;
     private void FixedUpdate()
     {
-        transform.position = Vector3.Lerp((this.transform.position), (EndPos.transform.position), 0.005f);
+        if (is_enabled) transform.position = Vector3.Lerp((this.transform.position), (EndPos.transform.position), 0.01f);
     }
 }
