@@ -26,7 +26,11 @@ public class TurretAI : MonoBehaviour
 
     void Update()
     {
-        if (hp.hp == 0 || hp.hp > 100) Destroy(gameObject);
+        if (hp.hp == 0 || hp.hp > 100)
+        {
+            transform.Find("Explosion").gameObject.SetActive(true);
+            Destroy(gameObject, 1f);
+        }
 
         GameObject target = null; ;
         if (targets.Count == 0) target = null; else target  = targets[0];
