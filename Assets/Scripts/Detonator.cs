@@ -13,7 +13,9 @@ public class Detonator : MonoBehaviour
     public float explosion_radius = 5f;
     [Header("Текстура для уничтоженных обьектов:")]
     public Texture tex;
-    
+
+    public bool DETONATE = false;
+
     public void Detonate()
     {
         MeshRenderer r = gameObject.GetComponent<MeshRenderer>();
@@ -38,6 +40,8 @@ public class Detonator : MonoBehaviour
 
         Destroy(this.gameObject, 5f);
     }
+
+    private void Update() {if (DETONATE) Detonate();}
 
     private void detonate_childs(GameObject parent) //Разрушаем связь между родительными и дочерними обьектами, выключяем все скрипты в дочерних обьектах
     {
