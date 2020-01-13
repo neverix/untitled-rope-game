@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RaycastGun : Gun
 {
+    public int damage = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,15 @@ public class RaycastGun : Gun
     void Update()
     {
         
+    }
+
+    public override void Shoot (Transform head) {
+        RaycastHit hit;
+        if (Physics.Raycast (head.position, head.forward, out hit)) {
+            HP h = hit.collider.GetComponent<HP> ();
+            if (h != null) {
+                h.hp -= damage;
+            }
+        }
     }
 }

@@ -42,5 +42,8 @@ public class GunHolder : MonoBehaviour
                 gun = null;
             }
         }
+        if(Input.GetButtonDown("Fire1") && gun != null) {
+            gun.Shoot (transform);
+        }
     }
 }

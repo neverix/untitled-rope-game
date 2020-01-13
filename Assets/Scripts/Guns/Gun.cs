@@ -16,5 +16,5 @@ public class Gun : MonoBehaviour
         
     }
 
-    void Shoot (Transform head) { }
+    public virtual void Shoot (Transform head) { }
 }
