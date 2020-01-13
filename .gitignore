@@ -8,6 +8,8 @@
 sysinfo.txt
 *.pidb.meta
 .vs/
+*.icloud
+*.DS_Store
  
 # VS/Rider/MD/Consulo
 ExportedObj/
