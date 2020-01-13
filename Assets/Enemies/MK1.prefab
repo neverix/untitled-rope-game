@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: -142250165830572091}
   - component: {fileID: 8480198715351555034}
   m_Layer: 9
-  m_Name: Simple Turret
+  m_Name: MK1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365,6 +365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c69cbf6688d48a4fbe6cf964a23dbeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplosionParticleSystem: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426,
+    type: 3}
 --- !u!1 &6769486480604088752
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,8 +28,9 @@ public class TurretAI : MonoBehaviour
     {
         if (hp.hp == 0 || hp.hp > 100)
         {
-            transform.Find("Explosion").gameObject.SetActive(true);
-            Destroy(gameObject, 1f);
+            Destroy(GetComponent<SphereCollider>());
+            GetComponent<Detonator>().Detonate();
+            this.enabled = false;
         }
 
         GameObject target = null; ;
