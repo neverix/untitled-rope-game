@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 164348883144604139}
   - component: {fileID: 6679543224805371643}
   - component: {fileID: 7281498050511134990}
-  m_Layer: 9
+  m_Layer: 31
   m_Name: Sticker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 3961094287669470454}
   - component: {fileID: 1414897044198443078}
   - component: {fileID: 8262892170796680081}
-  m_Layer: 9
+  m_Layer: 31
   m_Name: Real_Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 7731117704523221609}
   - component: {fileID: -142250165830572091}
   - component: {fileID: 8480198715351555034}
-  m_Layer: 9
+  m_Layer: 31
   m_Name: MK1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,6 +367,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionParticleSystem: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426,
     type: 3}
+  C4_count: 300
+  explosion_radius: 5
+  tex: {fileID: 2800000, guid: bc2127d7070158e4fae2cee26c5adb54, type: 3}
 --- !u!1 &6769486480604088752
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5946396978401017111}
-  m_Layer: 9
+  m_Layer: 31
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 296067581760676024}
-  m_Layer: 9
+  m_Layer: 31
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,6 +432,19 @@ Transform:
   m_Father: {fileID: 5814366226487726117}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1210969404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7714146744612252549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.98978, y: 0.7799077, z: 1.9159169}
+  m_Center: {x: 0.01478982, y: -0.037782907, z: 0.027136564}
 --- !u!1 &8292409254033741264
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +454,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5814366226487726117}
-  m_Layer: 9
+  m_Layer: 31
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,11 +565,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: turret_head
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: e71fb5036cfda7441997c2b8f84d36f2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2534866581884222612, guid: e71fb5036cfda7441997c2b8f84d36f2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e71fb5036cfda7441997c2b8f84d36f2, type: 3}
 --- !u!4 &961858134756260875 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: e71fb5036cfda7441997c2b8f84d36f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5198139330508281617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7714146744612252549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2534866581884222612, guid: e71fb5036cfda7441997c2b8f84d36f2,
     type: 3}
   m_PrefabInstance: {fileID: 5198139330508281617}
   m_PrefabAsset: {fileID: 0}

@@ -4,10 +4,21 @@ using UnityEngine;
 
 public class Detonator : MonoBehaviour
 {
+    [Header("Система частиц для взрыва:")]
+    [Header("Для взрыва вызовите Detonator.Detonate()")]
     public GameObject ExplosionParticleSystem;
-
+    [Header("Количество взрывчатки C4 (в граммах):")]
+    public float C4_count = 300f;
+    [Header("Мощность взрывчатки (в метрах):")]
+    public float explosion_radius = 5f;
+    [Header("Текстура для уничтоженных обьектов:")]
+    public Texture tex;
+    
     public void Detonate()
     {
+        MeshRenderer r = gameObject.GetComponent<MeshRenderer>();
+        if (r) r.material.mainTexture = tex;
+
         gameObject.AddComponent<Rigidbody>();
         gameObject.GetComponent<Rigidbody>().AddExplosionForce(300f, transform.position, 5f);
 
@@ -25,7 +36,7 @@ public class Detonator : MonoBehaviour
 
         explosion.transform.position = this.transform.position;
 
-        Destroy(this.gameObject);
+        Destroy(this.gameObject, 5f);
     }
 
     private void detonate_childs(GameObject parent) //Разрушаем связь между родительными и дочерними обьектами, выключяем все скрипты в дочерних обьектах
@@ -37,7 +48,10 @@ public class Detonator : MonoBehaviour
             child.parent = parent.transform.parent;
 
             child.gameObject.AddComponent<Rigidbody>();
-            child.gameObject.GetComponent<Rigidbody>().AddExplosionForce(300f, parent.transform.position, 5f);
+            child.gameObject.GetComponent<Rigidbody>().AddExplosionForce(C4_count, transform.position, explosion_radius);
+
+            MeshRenderer r = child.GetComponent<MeshRenderer>();
+            if (r) r.material.mainTexture = tex;
 
             Destroy(child.gameObject, 5.0f);
         }

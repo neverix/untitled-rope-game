@@ -1473,30 +1473,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 560684890856055202, guid: c6e9720f6494e93438921b0494d67786,
-        type: 3}
-      propertyPath: m_Layer
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 3299917118355663487, guid: c6e9720f6494e93438921b0494d67786,
-        type: 3}
-      propertyPath: m_Layer
-      value: 31
-      objectReference: {fileID: 0}
     - target: {fileID: 3897526165160946126, guid: c6e9720f6494e93438921b0494d67786,
         type: 3}
       propertyPath: m_Name
       value: MK1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3897526165160946126, guid: c6e9720f6494e93438921b0494d67786,
-        type: 3}
-      propertyPath: m_Layer
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 4252081087387373080, guid: c6e9720f6494e93438921b0494d67786,
-        type: 3}
-      propertyPath: m_Layer
-      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 4608871492754527750, guid: c6e9720f6494e93438921b0494d67786,
         type: 3}
@@ -1552,31 +1532,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6134826174644537206, guid: c6e9720f6494e93438921b0494d67786,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6769486480604088752, guid: c6e9720f6494e93438921b0494d67786,
-        type: 3}
-      propertyPath: m_Layer
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 7276687169717787214, guid: c6e9720f6494e93438921b0494d67786,
-        type: 3}
-      propertyPath: m_Layer
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 7714146744612252549, guid: c6e9720f6494e93438921b0494d67786,
-        type: 3}
-      propertyPath: m_Layer
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 8292409254033741264, guid: c6e9720f6494e93438921b0494d67786,
-        type: 3}
-      propertyPath: m_Layer
-      value: 31
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6e9720f6494e93438921b0494d67786, type: 3}
