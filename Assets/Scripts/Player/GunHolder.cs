@@ -9,6 +9,7 @@ public class GunHolder : MonoBehaviour
 
     Gun gun;
     Rigidbody rb;
+    Transform prevParent;
 
     // Start is called before the first frame update
     void Start()
@@ -26,17 +27,20 @@ public class GunHolder : MonoBehaviour
                     Gun g = hit.collider.GetComponent<Gun> ();
                     if (g != null) {
                         rb = g.GetComponent<Rigidbody> ();
+                        rb.isKinematic = true;
                         gun = g;
+                        prevParent = gun.transform.parent;
+                        gun.transform.SetParent (holder);
+                        gun.transform.localPosition = Vector3.zero;
+                        gun.transform.localRotation = Quaternion.identity;
                     }
                 }
             } else {
-                gun = null;
+                gun.transform.SetParent (prevParent);
+                rb.isKinematic = false;
                 rb.velocity = transform.forward * throwSpeed;
+                gun = null;
             }
-        }
-        if(gun != null) {
-            rb.MovePosition (holder.position);
-            rb.MoveRotation (holder.rotation);
         }
     }
 }
