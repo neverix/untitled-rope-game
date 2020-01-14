@@ -5,7 +5,7 @@ using UnityEngine;
 public class GunHolder : MonoBehaviour
 {
     public float throwSpeed = 10f;
-    public float maxDistance = 3f;
+    public float maxDistance = 5f;
     public Transform holder;
     public LayerMask gunMask;
 
@@ -25,7 +25,7 @@ public class GunHolder : MonoBehaviour
         if (Input.GetButtonDown ("Pick Up")) {
             if (gun == null) {
                 RaycastHit hit;
-                if (Physics.Raycast (new Ray(transform.position, transform.forward), out hit, gunMask)) {
+                if (Physics.Raycast (new Ray(transform.position, transform.forward), out hit, maxDistance, gunMask)) {
                     Gun g = hit.collider.GetComponent<Gun> ();
                     if (g != null) {
                         rb = g.GetComponent<Rigidbody> ();

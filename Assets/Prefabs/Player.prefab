@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwSpeed: 15
-  maxDistance: 1
+  maxDistance: 5
   holder: {fileID: 6993542398557851111}
   gunMask:
     serializedVersion: 2
