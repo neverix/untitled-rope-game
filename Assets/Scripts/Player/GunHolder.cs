@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class GunHolder : MonoBehaviour
 {
-    public float throwSpeed;
+    public float throwSpeed = 10f;
+    public float maxDistance = 5f;
     public Transform holder;
+    public LayerMask gunMask;
 
     Gun gun;
     Rigidbody rb;
+    Transform prevParent;
 
     // Start is called before the first frame update
     void Start()
@@ -22,21 +25,27 @@ public class GunHolder : MonoBehaviour
         if (Input.GetButtonDown ("Pick Up")) {
             if (gun == null) {
                 RaycastHit hit;
-                if (Physics.Raycast (transform.position, transform.forward, out hit)) {
+                if (Physics.Raycast (new Ray(transform.position, transform.forward), out hit, maxDistance, gunMask)) {
                     Gun g = hit.collider.GetComponent<Gun> ();
                     if (g != null) {
                         rb = g.GetComponent<Rigidbody> ();
+                        rb.isKinematic = true;
                         gun = g;
+                        prevParent = gun.transform.parent;
+                        gun.transform.SetParent (holder);
+                        gun.transform.localPosition = Vector3.zero;
+                        gun.transform.localRotation = Quaternion.identity;
                     }
                 }
             } else {
-                gun = null;
+                gun.transform.SetParent (prevParent);
+                rb.isKinematic = false;
                 rb.velocity = transform.forward * throwSpeed;
+                gun = null;
             }
         }
-        if(gun != null) {
-            rb.MovePosition (holder.position);
-            rb.MoveRotation (holder.rotation);
+        if(Input.GetButtonDown("Fire1") && gun != null) {
+            gun.Shoot (transform);
         }
     }
 }

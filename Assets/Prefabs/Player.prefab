@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6175921007756011181}
   - component: {fileID: 6175921007756011182}
   - component: {fileID: 2906893075322781539}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -109,13 +109,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbcc145cffeaf494b8ea24859dcede4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 15
+  gravity: 20
   jumpVelocity: 10
   groundCheck: {fileID: 6175921007823675320}
   groundDistance: 0.1
   groundMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 2147484471
 --- !u!114 &2906893075322781539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,7 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6175921007823675320}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,8 +271,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42053b8588de64f25a156d80bfbed67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSpeed: 2
+  throwSpeed: 15
+  maxDistance: 5
   holder: {fileID: 6993542398557851111}
+  gunMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &8739520707602147645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,7 +363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6993542398557851111}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gun Holder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7726528874765881191}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.33, y: -0.15, z: 0.637}
+  m_LocalPosition: {x: 0.72, y: -0.15, z: 1.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6175921007898375067}
