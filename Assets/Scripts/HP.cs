@@ -1,1 +1,3 @@
-﻿public class HP : UnityEngine.MonoBehaviour {public byte hp = 100;}
+﻿public class HP : UnityEngine.MonoBehaviour {
+    public int hp = 100;
+}
