@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - SF_Door
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -14,9 +13,6 @@ TagManager:
   - UI
   - 
   - 
-  - Postprocess
-  - Gun
-  - Player
   - 
   - 
   - 
@@ -37,7 +33,10 @@ TagManager:
   - 
   - 
   - 
-  - Turret
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
